@@ -33,6 +33,7 @@ type FederationRelationship struct {
 	// Required. The endpoint profile type.
 	//
 	// Types that are assignable to BundleEndpointProfile:
+	//
 	//	*FederationRelationship_HttpsWeb
 	//	*FederationRelationship_HttpsSpiffe
 	BundleEndpointProfile isFederationRelationship_BundleEndpointProfile `protobuf_oneof:"bundle_endpoint_profile"`

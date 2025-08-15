@@ -82,8 +82,9 @@ func (x *X509SVIDWithKey) GetX509SvidKey() []byte {
 // SubscribeToX509SVIDsRequest is used by clients to subscribe the set of SVIDs that
 // any given workload is entitled to. Clients subscribe to a workload's SVIDs by providing
 // one-of
-//  - a set of selectors describing the workload.
-//  - a PID of a workload process.
+//   - a set of selectors describing the workload.
+//   - a PID of a workload process.
+//
 // Specifying both at the same time is not allowed.
 //
 // Subscribers are expected to ensure that the PID they use is not recycled
@@ -298,8 +299,9 @@ func (x *SubscribeToX509BundlesResponse) GetCaCertificates() map[string][]byte {
 
 // FetchJWTSVIDsRequest is used by clients to fetch a JWT-SVID for a workload.
 // Clients may provide one-of
-//  - a set of selectors describing the workload.
-//  - a PID of a workload process.
+//   - a set of selectors describing the workload.
+//   - a PID of a workload process.
+//
 // Specifying both at the same time is not allowed.
 //
 // Callers are expected to ensure that the PID they use is not recycled

@@ -140,6 +140,8 @@ protoc_gen_go_base_dir := $(build_dir)/protoc-gen-go
 protoc_gen_go_dir := $(protoc_gen_go_base_dir)/$(protoc_gen_go_version)-go$(go_version)
 protoc_gen_go_bin := $(protoc_gen_go_dir)/protoc-gen-go
 
+$(warning 变量 protoc_gen_go_version 的值是: $(protoc_gen_go_version))
+
 $(protoc_gen_go_bin): | go-check
 	@echo "Installing protoc-gen-go $(protoc_gen_go_version)..."
 	@rm -rf $(protoc_gen_go_base_dir)
@@ -150,7 +152,7 @@ $(protoc_gen_go_bin): | go-check
 # protoc-gen-go-grpc
 #############################################################################
 
-protoc_gen_go_grpc_version := v1.0.1
+protoc_gen_go_grpc_version := latest
 protoc_gen_go_grpc_base_dir := $(build_dir)/protoc-gen-go-grpc
 protoc_gen_go_grpc_dir := $(protoc_gen_go_grpc_base_dir)/$(protoc_gen_go_grpc_version)-go$(go_version)
 protoc_gen_go_grpc_bin := $(protoc_gen_go_grpc_dir)/protoc-gen-go-grpc

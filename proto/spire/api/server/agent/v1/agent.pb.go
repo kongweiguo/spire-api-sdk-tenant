@@ -414,6 +414,7 @@ type AttestAgentRequest struct {
 	// Required. The data for the step in the attestation flow.
 	//
 	// Types that are assignable to Step:
+	//
 	//	*AttestAgentRequest_Params_
 	//	*AttestAgentRequest_ChallengeResponse
 	Step isAttestAgentRequest_Step `protobuf_oneof:"step"`
@@ -497,6 +498,7 @@ type AttestAgentResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Step:
+	//
 	//	*AttestAgentResponse_Result_
 	//	*AttestAgentResponse_Challenge
 	Step isAttestAgentResponse_Step `protobuf_oneof:"step"`
