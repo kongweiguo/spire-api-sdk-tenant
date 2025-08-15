@@ -1,4 +1,4 @@
-module github.com/spiffe/spire-api-sdk
+module github.com/kongweiguo/spire-api-sdk-tenant
 
 go 1.12
 

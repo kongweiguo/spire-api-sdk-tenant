@@ -1,6 +1,6 @@
 syntax = "proto3";
 package spire.api.server.debug.v1;
-option go_package = "github.com/spiffe/spire-api-sdk/proto/spire/api/server/debug/v1;debugv1";
+option go_package = "github.com/kongweiguo/spire-api-sdk-tenant/proto/spire/api/server/debug/v1;debugv1";
 
 import "spire/api/types/spiffeid.proto";
 

@@ -49,7 +49,7 @@ SPIRE's main branch depends on a pseudo-version of this repository based on the
 `next` branch (see https://golang.org/ref/mod#pseudo-versions). Once changes
 have been merged into the `next` branch, the pseudo-version dependency in the
 SPIRE repository can be updated by running `go get
-github.com/spiffe/spire-api-sdk@next` from the SPIRE repository.
+github.com/kongweiguo/spire-api-sdk-tenant@next` from the SPIRE repository.
 
 Relying on a pseudo versions means that this repository only needs tags
 for the offically released versions, while still allowing SPIRE to work with
