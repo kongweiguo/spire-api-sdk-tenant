@@ -72,6 +72,11 @@ else
 $(error unsupported ARCH: $(arch1))
 endif
 
+$(info 变量 os1 的值是: $(os1))
+$(info 变量 os2 的值是: $(os2))
+$(info 变量 arch1 的值是: $(arch1))
+$(info 变量 arch2 的值是: $(arch2))
+
 build_dir := ${CURDIR}/.build/$(os1)-$(arch1)
 
 #############################################################################
@@ -108,14 +113,17 @@ endif
 # protoc
 #############################################################################
 
-protoc_version = 3.20.1
+protoc_version = 32.0
 ifeq ($(arch2),arm64)
 protoc_url = https://github.com/protocolbuffers/protobuf/releases/download/v$(protoc_version)/protoc-$(protoc_version)-$(os2)-aarch_64.zip
+# https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-osx-aarch_64.zip
 else
 protoc_url = https://github.com/protocolbuffers/protobuf/releases/download/v$(protoc_version)/protoc-$(protoc_version)-$(os2)-$(arch1).zip
 endif
 protoc_dir = $(build_dir)/protoc/$(protoc_version)
 protoc_bin = $(protoc_dir)/bin/protoc
+
+$(info 变量 protoc_url 的值是: $(protoc_url))
 
 $(protoc_bin):
 	@echo "Installing protoc $(protoc_version)..."
